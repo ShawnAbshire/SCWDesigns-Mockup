@@ -1,0 +1,30 @@
+.performance-widget {
+    .graph-widget {
+        padding: 15px;
+        height: 225px;
+        color: $white;
+
+        .trending { i { color: lighten($black, 25%); } }
+        h3 { font-size: 18px; font-weight: bold; padding-bottom: 5px; }
+        h4 { font-size: 14px; opacity: 0.7; }
+
+        .chart-container {
+            padding: 30px 10px 10px 10px;
+
+            .chart-line { height: 100px; max-height: 100px; }
+        }
+    }
+
+    .card-content {
+        .total {
+            @include flexin(row, nowrap, space-between, flex-start, flex-start);
+            color: $default-text-color;
+            margin-bottom: 0;
+
+            div:last-child { border-left: 1px solid lighten($light-text-color2, 20%); }
+        }
+
+        h3 { font-size: 28px; }
+        p { font-size: 17px; color: $light-text-color2; font-weight: bold; }
+    }
+}

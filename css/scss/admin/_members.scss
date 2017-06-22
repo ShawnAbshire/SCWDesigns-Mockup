@@ -1,0 +1,20 @@
+#addressbook {
+    .card {
+        position: relative;
+
+        .actions {
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            font-size: 20px;
+            color: $white;
+
+            i {
+                margin-left: 10px;
+                opacity: 0.5;
+
+                &:hover { cursor: pointer; opacity: 1;  }
+            }
+        }
+    }
+}

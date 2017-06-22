@@ -1,0 +1,74 @@
+.form-group {
+    overflow: scroll;
+    
+    &.card-group {
+        .group .input {
+            input {
+                background-color: $form-input-background;
+                border: 1px solid darken($table-odd, 15%);
+                color: $default-text-color;
+                max-width: 345px;
+                border-radius: 3px;
+                margin: 0;
+                height: 1rem;
+                padding: 10px 15px;
+
+                &:focus {
+                    border: 1px solid $pink;
+                    box-shadow: none;
+                }
+
+                &:disabled { background-color: darken($form-input-background, 15%); }
+                &:readonly { background-color: darken($form-input-background, 15%); }
+            }
+
+            .symbol { position: absolute; top: 9px; left: 25px; }
+
+            .select2-container--default .select2-selection--single {
+                background-color: darken($table-odd, 2.5%);
+                border: 1px solid darken($table-odd, 15%);
+                color: $default-text-color;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__rendered {
+                color: $default-text-color;
+                padding-left: 15px;
+            }
+        }
+    }
+
+    .row { margin: 15px 0; }
+
+    h1 {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $light-text-color;
+    }
+
+    .group {
+        .label {
+            @include flexin(row, nowrap, space-between, center, center);
+            line-height: 40px;
+        }
+
+        .value { display: table-cell; }
+
+        .input {
+            &.small { width: 125px; }
+            &.symbol { position: relative; }
+            input {
+                &.price { text-align: right; }
+            }
+        }
+
+        select { min-width: 275px; }
+    }
+}
+
+// NOTE(Shawn): This may cause problems on other pages.... I do not want a dark background unless it's on a form group.
+.select2-dropdown {
+    background-color: darken($table-odd, 2.5%);
+    border: 1px solid darken($table-odd, 15%);
+    color: $default-text-color;
+}

@@ -1,0 +1,45 @@
+.main-content {
+    position: relative;
+    padding-top: 65px;
+
+    .containment { margin: 40px; }
+
+    .page-header {
+        @include flexin(row, nowrap, space-between, flex-start, center);
+        margin: 0 0 40px;
+        padding: 0;
+        border: none;
+        box-sizing: border-box;
+
+        .header {
+            h1 {
+                margin-bottom: 5px;
+                margin-top: 0;
+                color: $pink;
+                font-size: 25px;
+                font-weight: bold;
+
+                i {
+                    font-size: 22px;
+                    color: $body-icon-color;
+                }
+            }
+
+            p { font-size: 14px; color: $light-text-color2; line-height: 1.4; }
+        }
+    }
+}
+
+.footer-actions {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    transition: all .5s;
+    z-index: 1100;
+    will-change: transform;
+    transform: translate3d(0, +150%, 0);
+
+    &.active {
+        transform: translate3d(0, 0, 0);
+    }
+}

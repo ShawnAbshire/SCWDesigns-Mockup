@@ -1,0 +1,11 @@
+.todo-list {
+    > li {
+        @include flexin(row, nowrap, space-between, flex-start, center);
+
+        label {
+            font-size: 18px;
+            line-height: 21px;
+            cursor: pointer;
+        }
+    }
+}

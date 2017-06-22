@@ -1,0 +1,47 @@
+.box-tabs {
+    color: $boxtab-color;
+    line-height: 45px;
+
+    li {
+        padding-right: 10px;
+        display: inline-block;
+        margin: 0 15px 0 0;
+        padding: 0;
+        z-index: 25;
+
+        &.card {
+            box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.16), 0 -5px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        &.active {
+            a { color: $boxtab-color-hover; background-color: $white; font-weight: bold; }
+        }
+
+        a {
+            background-color: lighten($black, 94%);
+            height: 30px;
+            line-height: 30px;
+            padding: 15px 30px;
+            color: $boxtab-color;
+            font-size: 17px;
+
+            &:hover { background-color: $white; color: $boxtab-color-hover; }
+        }
+    }
+}
+
+.no-col-padding > .col { padding: 0 !important; }
+
+.tab-content-container {
+    position: relative;
+    top: -5px;
+
+    .tab-content {
+        display: none;
+        padding: 25px 15px;
+
+        &.active { display: block; }
+    }
+
+    > div { padding: 10px; background-color: $white; }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "SCWDesigns Mockup",
+  "private": true,
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "jquery": "^3.1.0",
+    "highcharts": "highcharts.com#^4.2.5",
+    "select2": "^4.0.3",
+    "datatables": "^1.10.12",
+    "dropzone": "^4.3.0",
+    "ckeditor": "^4.5.10"
+  }
+}

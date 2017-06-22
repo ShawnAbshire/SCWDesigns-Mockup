@@ -1,0 +1,60 @@
+.timeline {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+
+    li {
+        margin-bottom: 20px;
+        position: relative;
+
+       &:not(:last-child):after {
+            border-left: solid 1px lighten($submenu-tree-color, 40%);
+            content: '';
+            width: 9px;
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 18px;
+            left: 9px;
+        }
+
+        .timeline-badge {
+            position: absolute;
+            left: -8px;
+            top: -7px;
+            margin-left: 0;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 1.4em;
+            z-index: 100;
+            text-align: center;
+
+            i { font-weight: bolder; }
+
+            &.blue-circle { > i { color: blue; } }
+            &.red-circle { > i { color: red; } }
+            &.green-circle { > i { color: green; } }
+            &.pink-circle { > i { color: $pink; } }
+            &.orange-circle { > i { color: orange; } }
+            &.yellow-circle { > i { color: yellow; } }
+        }
+
+        .timeline-panel {
+            margin-left: 30px;
+
+            .timeline-header {
+                color: $default-text-color;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            .timeline-body {
+                color: $light-text-color;
+                font-size: 13px;
+                font-weight: normal;
+            }
+        }
+    }
+}

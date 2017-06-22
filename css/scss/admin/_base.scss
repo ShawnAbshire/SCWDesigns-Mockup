@@ -1,0 +1,91 @@
+/* CSS for SCW Designs */
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/SourceSansPro/SourceSansPro-Light.otf');
+    src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(../fonts/SourceSansPro/SourceSansPro-Light.otf) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/SourceSansPro/SourceSansPro-Regular.otf');
+    src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(../fonts/SourceSansPro/SourceSansPro-Regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/SourceSansPro/SourceSansPro-Semibold.otf');
+    src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(../fonts/SourceSansPro/SourceSansPro-Semibold.otf) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/SourceSansPro/SourceSansPro-Bold.otf');
+    src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(../fonts/SourceSansPro/SourceSansPro-Bold.otf) format("embedded-opentype");
+}
+
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { border-radius: 10px; background-color: transparent; }
+::-webkit-scrollbar-thumb { border-radius: 10px; background-color: $pink; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { border: none; margin: 0; padding: 0; }
+body { font-family: $font-source; }
+fieldset, img { border: 0; }
+li { list-style: none; }
+a img { border: 0; }
+a { text-decoration: none; color: $link-color; }
+a:hover {
+    -webkit-transition: color,0.25s;
+    -o-transition: color,0.25s;
+    -moz-transition: color,0.25s;
+    transition: color,0.25s;
+}
+a:focus, a:active { -moz-outline: none; outline: 0; }
+* { outline: 0 !important; }
+body { background-color: $body-background; color: $default-text-color; }
+.text-black { color: $black !important; }
+.text-pink, .subscribed { color: $pink !important; }
+.input-group { display: table; }
+.input-group input, .suffix { display: table-cell; }
+.suffix { width: 1%; padding-left: 25px; }
+.error, .star { color: $red; }
+.success, .published { color: $green; }
+.pending { color: $orange; }
+.uploading { color: $yellow; }
+.status {
+    padding: 5px;
+    background-color: $light-text-color2;
+    border-radius: 3px;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+
+    &.accepted, &.paid, &.refunded { background-color: $green; }
+    &.cancelled , &.declined { background-color: $red; }
+    &.awaiting, &.partially { background-color: $yellow; }
+}
+
+.star {
+    &.one { i:nth-child(1) { color: $yellow; } }
+    &.two { i:nth-child(-n + 2) { color: $yellow; } }
+    &.three { i:nth-child(-n + 3) { color: $yellow; } }
+    &.four { i:nth-child(-n + 4) { color: $yellow; } }
+    &.five { i:nth-child(-n + 5) { color: $yellow; } }
+
+    > i { padding-right: 5px; }
+}
+
+.button-container {
+    padding: 15px 15px 0 15px;
+    text-align: right;
+
+    button, a { margin-right: 10px; }
+}

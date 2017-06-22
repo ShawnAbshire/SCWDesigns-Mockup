@@ -1,0 +1,58 @@
+// Font Stacks
+$font-source: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-roboto: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Variables
+$black                          : #000000;
+$white                          : #FFFFFF;
+$pink                           : #f06292;
+$yellow                         : #FFC42C;
+$green                          : #6FB955;
+$red                            : #E16E47;
+$orange                         : #ff8000;
+$default-text-color             : #7d7f7f;
+$form-input-background          : #F9F9F9;
+$link-color                     : #666469;
+$light-text-color               : #bbbbbb;
+$light-text-color2              : #9b9b9b;
+$body-background                : #F3F5F5;
+$body-icon-color                : #9e9e9e;
+$logo-background-color          : #25292A;
+$navigation-background-color    : #2f3436;
+$navigation-border-top-color    : #363b3d;
+$menu-background                : #454a4b;
+$menu-text-color                : #D1D6D8;
+$submenu-tree-color             : #545D5F;
+$table-header-border-color      : #F0F0F0;
+$table-header-background-color  : #FAFAFA;
+$table-header-text-color        : #666666;
+$table-odd                      : #FAFAFA;
+$sidebar-right-background       : #EEEEEE;
+$boxtab-background              : #FAFAFA;
+$boxtab-color                   : #ACACAC;
+$boxtab-active-border           : #E2E2E2;
+$boxtab-color-hover             : #676767;
+
+
+// Imports
+@import 'lib/mixins';
+@import 'admin/animations';
+@import 'admin/base';
+@import 'admin/padding';
+@import 'admin/todo';
+@import 'admin/main';
+@import 'admin/sidebar';
+@import 'admin/navbar';
+@import 'admin/members';
+@import 'admin/content';
+@import 'admin/gallery';
+@import 'admin/orders';
+@import 'admin/dashboard';
+@import 'admin/product';
+@import 'admin/tabs';
+@import 'admin/login';
+@import 'admin/timeline';
+@import 'admin/forms';
+@import 'admin/materialize';
+@import 'admin/datatables';
+@import 'admin/media';

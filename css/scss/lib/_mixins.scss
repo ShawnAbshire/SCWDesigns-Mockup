@@ -1,0 +1,110 @@
+
+// Mixin Functions
+@mixin borderRadius($top: 5px, $right: 5px, $bottom-right: 5px, $bottom-left: 5px) {
+  -webkit-border-radius: $top $right $bottom-right $bottom-left;
+     -moz-border-radius: $top $right $bottom-right $bottom-left;
+      -ms-border-radius: $top $right $bottom-right $bottom-left;
+          border-radius: $top $right $bottom-right $bottom-left;
+}
+
+@mixin backgroundImages($path, $filename, $position: 0 0, $repeat: no-repeat) {
+    background: transparent url('#{$path}#{$filename}') $repeat $position;
+}
+
+@mixin backgroundGradiant($colorstart, $colorend, $left: top, $right: bottom) {
+    background: -webkit-gradient(linear, left $left, left $right, color-stop(0%, $colorstart), color-stop(100%, $colorend));
+    background: -webkit-linear-gradient(top, $colorstart 0%, $colorend 100%);
+    background: -moz-linear-gradient(top, $colorstart 0%, $colorend 100%);
+    background: -ms-linear-gradient(top, $colorstart 0%, $colorend 100%);
+    background: -o-linear-gradient(top, $colorstart 0%, $colorend 100%);
+    background: linear-gradient(to bottom, $colorstart 0%, $colorend 100%);
+}
+
+@mixin flexin($direction: row, $wrap: nowrap, $justify: flex-start, $alignment: space-between, $alignItems: flex-start) {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-content: $alignment;
+    -webkit-align-items: $alignItems;
+    -moz-align-items: $alignItems;
+    -ms-align-items: $alignItems;
+    align-items: $alignItems;
+}
+
+@mixin flexinGrow($size: 0) {
+    -webkit-flex-grow: $size;
+    -moz-flex-grow: $size;
+    -ms-flex-grow: $size;
+    flex-grow: $size;
+}
+
+@mixin flexinShrink($size: 0) {
+    -webkit-flex-shrink: $size;
+    -moz-flex-shrink: $size;
+    -ms-flex-shrink: $size;
+    flex-shrink: $size;
+}
+
+@mixin boxshadow($top: 7px, $left: 5px, $blur: 25px, $color: black) {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+}
+
+@mixin textshadow($h: 1px, $v: 1px, $blur: 3px, $color: #000000) {
+    text-shadow: $h $v $blur $color;
+}
+
+@mixin transition($type: background, $speed: 1s, $easing: ease-out) {
+    -webkit-transition: $type $speed $easing;
+    -moz-transition: $type $speed $easing;
+    -ms-transition: $type $speed $easing;
+    -o-transition: $type $speed $easing;
+    transition: $type $speed $easing;
+}
+
+@mixin tempBackground($r: 255, $g: 0, $b: 0, $a: 0.3) {
+    background-color: rgba($r, $g, $b, $a);
+}
+
+@mixin rotate($deg: 55) {
+    -webkit-transform: rotate(#{$deg}deg);
+    -ms-transform: rotate(#{$deg}deg);
+    -moz-transform: rotate(#{$deg}deg);
+    -o-transform: rotate(#{$deg}deg);
+    transform: rotate(#{$deg}deg);
+}
+
+@mixin animation($name, $duration) {
+    -webkit-animation-name: $name;
+    -webkit-animation-duration: $duration;
+    animation-name: $name;
+}
+
+@mixin transformScale($s: 1.2) {
+    transform: scale($s);
+    -webkit-transform: scale($s);
+    -moz-transform: scale($s);
+    -o-transform: scale($s);
+    -ms-transform: scale($s);
+}
+
+@mixin easeInTransition() {
+   transition: all 0.17s ease-in-out;
+   -moz-transition: all 0.17s ease-in-out;
+   -webkit-transition: all 0.17s ease-in-out;
+   -o-transition: all 0.17s ease-in-out;
+}
+
+@mixin blur($v: 5px) {
+    -webkit-filter: blur($v);
+    -moz-filter: blur($v);
+    -o-filter: blur($v);
+    -ms-filter: blur($v);
+    filter: blur($v);
+}

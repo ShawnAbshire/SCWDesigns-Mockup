@@ -1,0 +1,105 @@
+.gallery-container {
+    padding: 0 20px;
+
+    .gallery-albums {
+        padding: 0.5rem 20px;
+        width: 30%;
+
+        .create-album { width: 100%; }
+        .album-list {
+            padding: 15px 0;
+
+            li {
+                width: 100%;
+                padding: 10px 0;
+                font-size: 15px;
+                line-height: 23px;
+                color: $light-text-color2;
+                border-bottom: 1px solid $light-text-color;
+
+                &.selected { font-weight: bold; color: darken($default-text-color, 25%); font-size: 17px; }
+                &:hover { cursor: pointer; }
+                i { padding-right: 5px; }
+            }
+
+        }
+    }
+    .gallery-view {
+        padding: 0 20px; width: 70%;
+
+        .gallery-images {
+            color: $light-text-color;
+
+            .album-header {
+                @include flexin(row, nowrap, space-between, flex-start, center);
+                padding: 20px 30px;
+                color: $link-color;
+
+                .album-title { font-size: 30px; color: $link-color; }
+
+                .album-actions {
+                    ul li {
+                        display: inline-block;
+                        padding-left: 20px;
+
+                        i { padding-right: 5px; }
+
+                        label { color: $link-color; }
+                    }
+                }
+            }
+
+            .album-images {
+                margin-left: -11px;
+                margin-right: -11px;
+
+                .card-image > label {
+                    position: absolute;
+                    top: 10px;
+                    right: -5px;
+                    z-index: 55;
+                }
+            }
+
+            .gallery-info {
+                @include flexin(row, nowrap, space-between, flex-start, flex-start);
+
+                .info {
+                    @include flexin(column, nowrap, flex-start, flex-start, flex-start);
+                    width: 80%;
+
+                    .filename { font-size: 14px; color: $default-text-color; }
+                    .upload-date { font-size: 11px; color: $light-text-color; }
+                }
+
+                .image-actions {
+                    i { padding-left: 10px; font-size: 25px; }
+                }
+            }
+        }
+
+        .gallery-upload {
+            display: none;
+
+            .dropzone-custom {
+                @include tempBackground();
+                background-color: #ededed;
+                border: 2px dashed $light-text-color;
+                width: 100%;
+                height: 125px;
+
+                &:hover { cursor: pointer; }
+
+                .dz-message {
+                    color: $light-text-color;
+                    text-align: center;
+                    position: relative;
+                    top: 35%;
+                    font-weight: bold;
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+
+}
